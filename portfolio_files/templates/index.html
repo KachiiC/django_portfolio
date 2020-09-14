@@ -7,11 +7,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- CSS -->
-        <link rel="stylesheet" href="{% static 'index.css' %}">
+    <link rel="stylesheet" href="{% static 'index.css' %}">
 
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
           integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <!-- font awesome -->
+    <script src="https://use.fontawesome.com/aff43fef7b.js"></script>
 
     {% if title %}
     <title>Kachi's Portfolio - {{ title }}</title>
@@ -21,11 +24,18 @@
 </head>
 
 <body>
-{% include 'components/navbar.html' %}
+{% include 'navbar.html' %}
 <main class="container">
-        {% block content %}{% endblock %}
+    {% if messages %}
+    {% for message in messages %}
+    <div class="alert alert-{{ message.tags }}">
+        {{ message }}
+    </div>
+    {% endfor %}
+    {% endif %}
+    {% block content %}{% endblock %}
 </main>
-{% include 'components/footer.html' %}
+{% include 'footer.html' %}
 
 <!--<script src="index.js"></script>-->
 <!-- Bootstrap -->
