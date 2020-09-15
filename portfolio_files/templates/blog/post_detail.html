@@ -1,0 +1,21 @@
+{% extends "index.html" %}
+{% load static %}
+{% block content %}
+
+<!-- Main Content -->
+<div class="row mt-4">
+    <div class="col-8">
+        <h2 class="text-center mb-3">{{ object.title }}</h2>
+        <div class="mb-4 text-muted font-italic">
+            <h6>{{ object.post_preview }}</h6>
+            <small>Written on {{ object.date_posted|date:"F d, Y" }}</small>
+        </div>
+        <img class="post-placeholder mb-4" src="http://placehold.it/700x350">
+        <p>{{ object.content | linebreaksbr }}</p>
+        <p>Article Written By {{object.author.username}}</p>
+    </div>
+    <div class="col-4">
+        <h1>Sidebar</h1>
+    </div>
+</div>
+{% endblock content %}

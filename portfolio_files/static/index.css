@@ -1,5 +1,5 @@
 main {
-    margin: 80px 0px 30px 0px;
+    margin: 110px 0px 30px 0px;
 }
 
 .profile-icon {
@@ -68,4 +68,46 @@ footer {
 
 .footer-items .footer-logos {
     margin: 25px 60px 25px 60px;
+}
+
+/* --------------------
+:: Sidebar
+-------------------- */
+
+.blog-sidebar {
+    margin-bottom: 50px;
+}
+
+.single-widget-area {
+    margin-bottom: 30px;
+}
+
+.widget-title > h6 {
+    background: #000;
+    color: #ffffff;
+    height: 40px;
+    width: 100%;
+    line-height: 40px;
+    border-radius: 2px;
+    margin-bottom: 20px;
+    border-radius: 0.25rem !important;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+    text-align: center;
+}
+
+.sidebar {
+    text-align: center;
+}
+
+.sidebar-about-icon {
+    height: 150px;
+    width: 150px;
+    margin: 20px 0px;
+    border-radius: 50%;
+}
+
+.sidebar p {
+    color: #51545f;
+    padding: 20px;
+    width: 100%;
 }

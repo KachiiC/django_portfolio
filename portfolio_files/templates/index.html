@@ -6,6 +6,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- Icon -->
+    <link rel="shortcut icon" type="image/jpg" href="/favicon.jpg"/>
+
     <!-- CSS -->
     <link rel="stylesheet" href="{% static 'index.css' %}">
 
@@ -24,7 +27,7 @@
 </head>
 
 <body>
-{% include 'navbar.html' %}
+{% include 'components/navbar.html' %}
 <main class="container">
     {% if messages %}
     {% for message in messages %}
@@ -35,7 +38,7 @@
     {% endif %}
     {% block content %}{% endblock %}
 </main>
-{% include 'footer.html' %}
+{% include 'components/footer.html' %}
 
 <!--<script src="index.js"></script>-->
 <!-- Bootstrap -->
