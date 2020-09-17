@@ -11,7 +11,7 @@
         <div class="post-meta d-flex">
             <div class="d-flex">
                 <div class="post-preview-author">
-                    By <a href="#">{{ post.author.username }}</a>
+                    By <a href="{% url 'user-posts' post.author.username %}">{{ post.author.username }}</a>
                 </div>
                 <div class="post-preview-date">
                     {{ post.date_posted|date:"F d, Y" }}
@@ -19,11 +19,10 @@
             </div>
         </div>
         <div class="post-preview-paragraph">
-            <p>the content the content the content the content he content the content the content the content the
-                content the content the content the content content </p>
+            <p>{{ post.post_preview }}</p>
         </div>
         <div class="button-container">
-            <button href="{% url 'post-detail' post.id %}" class="read-button">Read Article</button>
+            <a href="{% url 'post-detail' post.id %}" class="blog-button">Read Article</a>
         </div>
     </div>
 </div>

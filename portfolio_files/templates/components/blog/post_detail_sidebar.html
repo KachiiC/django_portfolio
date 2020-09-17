@@ -1,0 +1,42 @@
+{% block content %}
+<div class="blog-sidebar">
+    <div class="single-widget-area sidebar">
+        <div class="widget-title">
+            <h6>Written by {{ object.author.username }}</h6>
+        </div>
+        <img class="sidebar-about-icon" src="{{ user.profile.image.url }}">
+        <p>{{ object.author.profile.user_bio }}</p>
+    </div>
+    <div class="single-widget-area sidebar">
+        <div class="widget-title mt-4">
+            <h6>Post details</h6>
+        </div>
+        <p>Written on {{ object.date_posted|date:"F d, Y" }}</p>
+    </div>
+    {% if object.author == user %}
+    <div class="single-widget-area sidebar">
+        <div class="widget-title mt-4">
+            <h6>Edit Post</h6>
+        </div>
+        <p>This post is written by you! You have the option to update or delete this post.</p>
+        <div class="post-buttons-container">
+            <a href="{% url 'post-update' object.id %}" class="update-button">Update</a>
+            <a href="{% url 'post-delete' object.id %}" class="delete-button">Delete</a>
+        </div>
+    </div>
+    {% else %}
+    <div class="single-widget-area sidebar">
+        <div class="widget-title mt-4">
+            <h6>Try it yourself</h6>
+        </div>
+        <p>Click here to create your own post and watch it will appear on the post list.</p>
+        <div class="single-button-container">
+            <a class="create-button" href="{% url 'post-create' %}">
+                Create Post
+            </a>
+        </div>
+        <p></p>
+    </div>
+    {% endif %}
+</div>
+{% endblock content %}

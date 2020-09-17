@@ -1,5 +1,7 @@
+{% load static %}
 {% block content %}
 <div class="blog-sidebar">
+    {% if user.is_authenticated %}
     <div class="single-widget-area sidebar">
         <div class="widget-title">
             <h6>{{ user.profile.user.username }}</h6>
@@ -7,12 +9,28 @@
         <img class="sidebar-about-icon" src="{{ user.profile.image.url }}">
         <p>{{ user.profile.user_bio }}</p>
     </div>
-
     <div class="single-widget-area sidebar">
         <div class="widget-title">
-            <h6>My Posts</h6>
+            <h6>Check out these feature!</h6>
         </div>
-        <h4>Posts</h4>
+        <p>Create a post on the blog!</p>
+        <a href="{% url 'blog-home' %}" class="blog-button">Django Blog</a>
     </div>
+    {% else %}
+    <div class="single-widget-area sidebar">
+        <div class="widget-title">
+            <h6>Django Portfolio</h6>
+        </div>
+        <img class="sidebar-about-icon" src="{% static 'imported_pics/django-icon.jpg' %}">
+        <p>Kachi's Django portfolio</p>
+    </div>
+    <div class="single-widget-area sidebar">
+        <div class="widget-title">
+            <h6>Unlock more features!</h6>
+        </div>
+        <p>Create an account to unlock more features!</p>
+        <a href="{% url 'register' %}" class="blog-button">Register</a>
+    </div>
+    {% endif %}
 </div>
 {% endblock content %}

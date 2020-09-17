@@ -1,0 +1,45 @@
+{% block content %}
+{% load static %}
+{% if user.is_authenticated %}
+<div class="blog-sidebar">
+    <div class="single-widget-area sidebar">
+        <div class="widget-title">
+            <h6>{{ user.profile.user.username }}</h6>
+        </div>
+        <img class="sidebar-about-icon" src="{{ user.profile.image.url }}">
+        <p>{{ user.profile.user_bio }}</p>
+    </div>
+    <div class="single-widget-area sidebar">
+        <div class="widget-title">
+            <h6>Write a new post!</h6>
+        </div>
+        <p>Click to add a new post</p>
+        <a href="{% url 'post-create' %}" class="create-button">Create new post</a>
+    </div>
+</div>
+{% else %}
+<div class="blog-sidebar">
+    <div class="single-widget-area sidebar">
+        <div class="widget-title">
+            <h6>Django</h6>
+        </div>
+        <img class="sidebar-about-icon" src="{% static 'imported_pics/django-icon.jpg' %}">
+        <p>A blog project I designed using django. You can also export the blog posts
+            via django rest framework by clicking <a href="{% url 'backend-home' %}">here.</a></p>
+    </div>
+    <div class="single-widget-area sidebar">
+        <div class="widget-title">
+            <h6>Write a post?</h6>
+        </div>
+        <p>In order to write a post you must first create an account, click here to register!</p>
+        <div class="button-container">
+            <a class="blog-button">Register</a>
+        </div>
+        <p>Already have an account? Log in here</p>
+        <div class="button-container">
+            <a class="blog-button" href="{% url 'login' %}">Login</a>
+        </div>
+    </div>
+</div>
+{% endif %}
+{% endblock content %}

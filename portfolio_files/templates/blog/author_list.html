@@ -3,41 +3,10 @@
 {% block content %}
 <div class="row">
     <div class="col-8">
-        <h2 class="text-center mb-4">Posts</h2>
-        {% for post in posts %}
-        <div class="list-blog trending-posts d-sm-flex">
-            <div class="trending-pics">
-                <img src="https://via.placeholder.com/350x200.png?text=placeholder">
-            </div>
-            <div class="trending-content">
-                <div class="trending-meta d-flex">
-                    <div class="trending-author-date-area d-flex">
-                        <div class="trending-author">
-                            By <a href="{% url 'user-posts' post.author.username %}">{{ post.author }}</a>
-                        </div>
-                        <div class="trending-date">
-                            {{ post.date_posted|date:"F d, Y" }}
-                        </div>
-                    </div>
-                    <div class="trending-comment-share-area d-flex">
-                        <div class="trending-comments">
-                            <a href="#"><i class="fa fa-comment-o" aria-hidden="true"></i> 0</a>
-                        </div>
-                        <div class="trending-share">
-                            <a href="#"><i class="fa fa-share-alt" aria-hidden="true"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <a href="{% url 'post-detail' post.id %}">
-                    <h4 class="trending-headline">{{ post.title }}</h4>
-                </a>
-                <p>{{ post.preview }}</p>
-                <a href="{% url 'post-detail' post.id %}" class="read-button">Read Article</a>
-            </div>
-        </div>
-        {% endfor %}
+        {% include 'components/blog/author_preview.html' %}
     </div>
     <div class="col-4">
-        <h1>Sidebar</h1>
+        {% include 'components/sidebar.html' %}
     </div>
+</div>
 {% endblock content %}

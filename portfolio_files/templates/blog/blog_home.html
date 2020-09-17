@@ -1,14 +1,12 @@
 {% extends "index.html" %}
+{% load static %}
 {% block content %}
 <div class="row">
-    <div class="col-9">
-        <h1 class="text-center mb-4">Blog Posts</h1>
-        {% for post in posts %}
+    <div class="col-8">
         {% include 'components/blog/post_preview.html' %}
-        {% endfor %}
     </div>
-    <div class="col-3">
-        <h1>Sidebar</h1>
+    <div class="col-4">
+        {% include 'components/blog/blog_home_sidebar.html' %}
     </div>
 </div>
 {% endblock %}

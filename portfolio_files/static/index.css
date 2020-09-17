@@ -2,6 +2,11 @@ main {
     margin: 110px 0px 30px 0px;
 }
 
+a,
+a:hover {
+    color: black
+}
+
 .profile-icon {
     border-radius: 50%;
     max-height: 30px;
@@ -75,7 +80,7 @@ footer {
 -------------------- */
 
 .blog-sidebar {
-    margin-bottom: 50px;
+    margin-bottom: 0px 0px 50px;
 }
 
 .single-widget-area {
@@ -113,7 +118,7 @@ footer {
 }
 
 /* --------------------
-:: Articles
+:: Blog Section
 -------------------- */
 
 .posts-container {
@@ -125,7 +130,7 @@ footer {
 
 .post-preview-content {
     flex-basis: 50%;
-    margin: 0px 15px 30px 15px;
+    margin: 0px 10px 30px;
 }
 
 .post-preview-pics {
@@ -144,7 +149,9 @@ footer {
 
 .post-preview-title {
     font-weight: 600;
-    padding: 0px 15px;
+    text-align: center;
+    padding-right: 15px;
+    padding: 0px 10px;
     margin: 5px 0;
     color: #232d37;
     text-transform: capitalize;
@@ -152,7 +159,7 @@ footer {
 }
 
 .post-meta {
-    padding: 0px 15px;
+    padding-left: 10px;
     align-items: center;
     align-self: center;
     justify-content: space-between;
@@ -182,7 +189,7 @@ footer {
 .post-preview-author a {
     padding-left: 6px;
     color: black;
-    font-weight: 600;
+    font-weight: 900;
 }
 
 .post-preview-paragraph {
@@ -195,18 +202,67 @@ footer {
 
 
 /** Read button **/
-.read-button {
-    font-size: 12px;
-    color: #000;
-    border: 1px solid #000;
-    border-radius: 18px;
-    height: 40px;
-    min-width: 175px;
+.button-container,
+.single-button-container {
+    margin: 17px 15px;
     text-align: center;
-    margin: 5px 50px;
 }
 
-.read-button:hover {
+.button-container {
+    padding-right: 35px;
+}
+
+.single-button-container {
+    padding: 0px 35px;
+}
+
+.blog-button,
+.create-button,
+.update-button,
+.delete-button {
+    text-align: center;
+    border-radius: 18px;
+    border: 1px solid #000;
+}
+
+.blog-button,
+.create-button {
+    padding: 10px 55px;
+}
+
+.update-button,
+.delete-button {
+    padding: 10px 20px;
+    margin: 0px 15px;
+    color: white;
+}
+
+.blog-button {
+    color: black;
+}
+
+.create-button {
+    background-color: green;
+}
+
+.update-button {
+    background-color: dodgerblue;
+}
+
+.delete-button {
+    background-color: red;
+}
+
+.blog-button:hover {
     color: #ffffff;
     background-color: #000
+}
+
+.create-button,
+.update-button,
+.delete-button,
+.create-button:hover,
+.update-button:hover,
+.delete-button:hover {
+    color: white;
 }

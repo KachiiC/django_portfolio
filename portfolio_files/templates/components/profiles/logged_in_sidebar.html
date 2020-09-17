@@ -1,0 +1,17 @@
+{% block content %}
+<div class="blog-sidebar">
+    <div class="single-widget-area sidebar">
+        <div class="widget-title">
+            <h6>{{ user.profile.user.username }}</h6>
+        </div>
+        <img class="sidebar-about-icon" src="{{ user.profile.image.url }}">
+        <p>{{ user.profile.user_bio }}</p>
+    </div>
+    <div class="single-widget-area sidebar">
+        <div class="widget-title">
+            <h6>My Posts</h6>
+        </div>
+        <h4>Posts</h4>
+    </div>
+</div>
+{% endblock content %}

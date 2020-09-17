@@ -1,0 +1,18 @@
+{% load static %}
+{% block content %}
+<div class="blog-sidebar">
+    <div class="single-widget-area sidebar">
+        <div class="widget-title">
+            <h6>Django Portfolio</h6>
+        </div>
+        <img class="sidebar-about-icon" src="{% static 'imported_pics/django-icon.jpg' %}">
+        <p>Django projects portfolio</p>
+    </div>
+    <div class="single-widget-area sidebar">
+        <div class="widget-title">
+            <h6>My Posts</h6>
+        </div>
+        <h4>Posts</h4>
+    </div>
+</div>
+{% endblock content %}

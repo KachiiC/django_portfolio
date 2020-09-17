@@ -1,9 +1,7 @@
 {% extends "index.html" %}
 {% load static %}
 {% block content %}
-
-<!-- Main Content -->
-<div class="row mt-4">
+<div class="row">
     <div class="col-8">
         <h2 class="text-center mb-3">{{ object.title }}</h2>
         <div class="mb-4 text-muted font-italic">
@@ -12,10 +10,9 @@
         </div>
         <img class="post-placeholder mb-4" src="http://placehold.it/700x350">
         <p>{{ object.content | linebreaksbr }}</p>
-        <p>Article Written By {{object.author.username}}</p>
     </div>
     <div class="col-4">
-        <h1>Sidebar</h1>
+        {% include 'components/blog/post_detail_sidebar.html' %}
     </div>
 </div>
 {% endblock content %}
