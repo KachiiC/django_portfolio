@@ -186,10 +186,11 @@ footer {
     z-index: 2;
 }
 
-.post-preview-author a {
+.post-preview-author a,
+.post-preview-author a:hover {
     padding-left: 6px;
     color: black;
-    font-weight: 900;
+    font-weight: 600;
 }
 
 .post-preview-paragraph {
@@ -241,6 +242,11 @@ footer {
     color: black;
 }
 
+.blog-button:hover {
+    color: #ffffff;
+    background-color: #000
+}
+
 .create-button {
     background-color: green;
 }
@@ -251,11 +257,6 @@ footer {
 
 .delete-button {
     background-color: red;
-}
-
-.blog-button:hover {
-    color: #ffffff;
-    background-color: #000
 }
 
 .create-button,

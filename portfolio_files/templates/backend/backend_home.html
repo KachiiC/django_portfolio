@@ -1,4 +1,55 @@
 {% extends "index.html" %}
 {% block content %}
-    <h1 class="text-center">Backend Server</h1>
+<div class="row">
+    <div class="col-8">
+        <h1 class="text-center">Backend Server</h1>
+        <p>Although django offers a wide range of tools to build a complete application,
+            you can use also use django restframework solely as a backend server. By using django as your framework,
+            you can use a more powerful frontend framework such as React or Angular. In order to do this, all you need
+            to do is serialize the information in your django models. Here is a list of the models used in this project
+            and their serialized forms.
+        </p>
+        <!-- Backend Cards -->
+        <div class="row">
+            <!-- Blog App -->
+            <div class="col-lg-6 mb-4">
+                <div class="card h-100">
+                    <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+                    <div class="card-body">
+                        <h4 class="card-title text-center">
+                            <a href="#">Post Model</a>
+                        </h4>
+                        <p class="card-text">
+                            The serialized data for the Post Model in the Blog App.
+                        </p>
+                        <p><strong>Other requests:</strong>
+                            <a href="#">GET</a>,
+                            <a href="#">PUT</a>,
+                            & <a href="#">DELETE</a>.
+                        </p>
+                        <p class="card-text"><strong>Fields</strong>: pk (primary key), post title, post preview,
+                        post content, date posted and author</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6 mb-4">
+                <div class="card h-100">
+                    <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+                    <div class="card-body">
+                        <h4 class="card-title text-center">
+                            <a href="#">Project Two</a>
+                        </h4>
+                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit aliquam
+                            aperiam nulla perferendis dolor nobis numquam, rem expedita, aliquid optio, alias illum
+                            eaque. Non magni, voluptates quae, necessitatibus unde temporibus.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-4">
+        {% include 'components/sidebar.html' %}
+    </div>
+</div>
 {% endblock %}
