@@ -9,7 +9,8 @@ urlpatterns = [
     path('', views.home, name="home"),
     path('blog/', include('blog.urls')),
     path('backend/', include('backend.urls')),
-    path('profiles/', include('profiles.urls'))
+    path('profiles/', include('profiles.urls')),
+    path('chat/', include('chat.urls')),
 ]
 
 if settings.DEBUG:
